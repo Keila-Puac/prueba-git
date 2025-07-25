@@ -25,7 +25,7 @@ def mostrar_biblioteca():
     if not biblioteca:
         print("La biblioteca está vacía.")
     else:
-        print("Biblioteca Virtual:")
+        print("📚 Biblioteca Virtual:")
         for libro in biblioteca:
             print(f"- Título: {libro['titulo']}")
             print(f"  Autor: {libro['autor']}")
@@ -44,7 +44,7 @@ def buscar_libros(**filtros):
         resultados = [libro for libro in resultados if libro["año"] is not None and libro["año"] <= filtros["año_max"]]
 
     if resultados:
-        print("Resultados de la búsqueda:")
+        print("🔎 Resultados de la búsqueda:")
         for libro in resultados:
             print(f"- {libro['titulo']} ({libro['año']}) - {libro['autor']} [{libro['genero']}]")
     else:
